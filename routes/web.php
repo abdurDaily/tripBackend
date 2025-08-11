@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home.page');
 
 
 Route::middleware(['auth', 'verified', 'admin'])->prefix('dashboard/')->name('dashboard.')->group(function(){
